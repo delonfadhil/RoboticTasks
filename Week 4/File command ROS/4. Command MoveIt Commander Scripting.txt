@@ -1,0 +1,12 @@
+roslaunch panda_moveit_config demo.launch
+rosrun moveit_commander moveit_commander_cmdline.py
+use panda_arm
+current
+rec c
+goal = c
+goal[0] = 0.2
+go goal
+goal[0] = 0.2
+goal[1] = 0.2
+plan goal
+execute
