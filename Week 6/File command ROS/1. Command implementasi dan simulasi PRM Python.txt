@@ -1,0 +1,30 @@
+cd catkin_ws
+catkin_make
+source devel/setup.bash
+echo "source ~/ws_moveit/devel/setup.bash" >> ~/.bashrc
+cd ~/catkin_ws/src
+
+# PRM tanpa matplotlib
+catkin_create_pkg prm_planner rospy std_msgs
+cd prm_planner
+nano ~/catkin_ws/src/prm_planner/src/prm.py
+chmod +x ~/catkin_ws/src/prm_planner/src/prm.py
+nano ~/catkin_ws/src/prm_planner/config/params.yaml
+nano ~/catkin_ws/src/prm_planner/launch/prm.launch
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+roslaunch prm_planner prm.launch
+
+# PRM dengan matplotlib
+cd ~/catkin_ws/src
+catkin_create_pkg prm_planner_matplotlib rospy std_msgs
+cd prm_planner_matplotlib
+nano ~/catkin_ws/src/prm_planner_matplotlib/src/prm_matplotlib.py
+chmod +x ~/catkin_ws/src/prm_planner_matplotlib/src/prm_matplotlib.py
+nano ~/catkin_ws/src/prm_planner_matplotlib/config/params.yaml
+nano ~/catkin_ws/src/prm_planner_matplotlib/launch/prm.launch
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+roslaunch prm_planner_matplotlib prm.launch

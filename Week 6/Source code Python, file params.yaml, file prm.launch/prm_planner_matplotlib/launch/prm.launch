@@ -1,0 +1,4 @@
+<launch>
+    <rosparam file="$(find prm_planner_matplotlib)/config/params.yaml" command="load"/>
+    <node name="prm_node" pkg="prm_planner_matplotlib" type="prm_matplotlib.py" output="screen"/>
+</launch>

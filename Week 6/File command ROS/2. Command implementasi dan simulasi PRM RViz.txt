@@ -1,0 +1,7 @@
+git clone https://github.com/nishadg246/Probabilistic-Roadmap
+cd Probabilistic-Roadmap
+catkin_make
+source devel/setup.bash
+roscore
+rosrun rrt-planning prm
+rviz
