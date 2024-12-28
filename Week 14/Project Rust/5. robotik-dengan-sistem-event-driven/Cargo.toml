@@ -1,0 +1,6 @@
+[package]
+name = "robotik-dengan-sistem-event-driven"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,6 @@
+[package]
+name = "simulasi-robot-menghindari-rintangan"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

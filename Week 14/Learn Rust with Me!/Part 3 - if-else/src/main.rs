@@ -1,0 +1,33 @@
+fn main() {
+    // Pernyataan if/else dasar
+    if 1 == 2 {
+        println!("The numbers are equal");
+    } else {
+        println!("The numbers are not equal");
+    }
+
+    // Mengikat nilai ke sebuah variabel menggunakan pernyataan if/else
+    let sunny_day = true;
+    let take_jacket = if sunny_day {
+        "Don't take a jacket"
+    } else {
+        "Take a jacket"
+    };
+
+    println!("{}", take_jacket);
+
+    // Menggunakan beberapa pernyataan if/else untuk mengevaluasi beberapa kondisi statements
+    let num = 100;
+    let out_of_range: bool;
+
+    if num < 0 {
+        out_of_range = true;
+    } else if num == 0 {
+        out_of_range = true
+    } else if num > 101 {
+        out_of_range = true;
+    } else {
+        out_of_range = false
+    }
+    println!("{}", out_of_range);
+}
